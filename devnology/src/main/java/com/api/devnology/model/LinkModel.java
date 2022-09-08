@@ -7,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 	/*Indica que a classe é uma entidade*/
 @Entity
@@ -52,5 +51,5 @@ public class LinkModel {
 	public void setLink(String link) {
 		this.link = link;
 	}
-		
+	
 }

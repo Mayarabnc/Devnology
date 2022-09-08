@@ -50,8 +50,8 @@ public class LinkController {
 	
 		/*Indica que o metodo responderá as requisições do tipo POST que forem enviadas para o endpoint*/
 	@PostMapping
-	public ResponseEntity<LinkModel> post(@Valid @RequestBody LinkModel link){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(link));			
+	public ResponseEntity<LinkModel> post(@Valid @RequestBody LinkModel link) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(link));		
 	}
 	
 		/*Indica que o metodo responderá as requisições do tipo PUT que forem enviadas para o endpoint*/
