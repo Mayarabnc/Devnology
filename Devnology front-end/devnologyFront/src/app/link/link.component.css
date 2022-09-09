@@ -1,0 +1,20 @@
+h1{
+    color: white;
+    margin-left: 110px;
+    font-size: 45px;
+}
+
+.fundoDoLinks{
+    margin-top: 80px;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0px 50px 50px 0px ;
+
+}
+
+.fundoCard{
+    background-color:  #d9d9d9;
+}
