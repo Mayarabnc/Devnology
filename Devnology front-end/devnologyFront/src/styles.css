@@ -1,0 +1,5 @@
+body{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(-20deg, white, #01ff5f) !important;
+}
