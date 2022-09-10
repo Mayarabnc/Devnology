@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 	/*Indica que a classe é uma entidade*/
@@ -27,6 +30,10 @@ public class LinkModel {
 	
 	@NotNull
 	private String link;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("linkmodel")
+	private Usuario usuario;
 
 	public long getId() {
 		return id;
@@ -50,6 +57,14 @@ public class LinkModel {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 }

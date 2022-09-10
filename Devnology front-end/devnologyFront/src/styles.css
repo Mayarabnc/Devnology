@@ -1,7 +1,7 @@
 body{
     
     background-repeat: no-repeat;
-    background-image: linear-gradient(-20deg, white, #01ff5f);
+    background-image: linear-gradient(-20deg, white, rgb(59, 59, 59), black) !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
