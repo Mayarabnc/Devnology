@@ -8,6 +8,7 @@ import { EditarLinkComponent } from './editar-link/editar-link.component';
 import { LinkComponent } from './link/link.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

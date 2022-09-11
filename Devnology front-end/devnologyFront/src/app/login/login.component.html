@@ -3,11 +3,11 @@
     <div class="row d-flex justify-content-center">
         <div class="col-ml-12 centralizarRetangulo ">
             <h1 class="d-flex justify-content-center">Login</h1>
-            <h5 class="justify-content-start ml-3 mt-3">Nome:</h5>
-            <input type="text" placeholder="Digite o nome que deseja usar para o link">
-            <h5 class="justify-content-start ml-3" >Link:</h5>
-            <input type="text" placeholder="Digite o link da pagina">
-            <button class="btn-cadastrar d-flex justify-content-center" >Entrar</button>
+            <h5 class="justify-content-start ml-3 mt-3">Usuário:</h5>
+            <input [(ngModel)]="userLogin.usuario" type="text" placeholder="Digite o nome que deseja usar para o link">
+            <h5 class="justify-content-start ml-3" >Senha:</h5>
+            <input [(ngModel)]="userLogin.senha" type="password" placeholder="Digite o link da pagina">
+            <button class="btn-cadastrar d-flex justify-content-center" (click)="entrar()">Entrar</button>
         </div>
     </div>
 </div>
