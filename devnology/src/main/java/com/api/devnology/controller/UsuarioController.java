@@ -18,7 +18,7 @@ import com.api.devnology.model.Usuario;
 import com.api.devnology.service.UsuarioService;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
 	

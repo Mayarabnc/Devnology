@@ -18,9 +18,15 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 	private UserDetailsService userDetailsService;
 	
 	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-		auth.userDetailsService(userDetailsService);
-	}
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+    	auth.userDetailsService(userDetailsService);
+
+    	auth.inMemoryAuthentication()
+        .withUser("root")
+        .password(passwordEncoder().encode("root"))
+        .authorities("ROLE_USER");
+
+    }
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
@@ -30,8 +36,8 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http.authorizeRequests()
-		.antMatchers("/usuario/logar").permitAll()
-		.antMatchers("/usuario/cadastrar").permitAll()
+		.antMatchers("/usuarios/logar").permitAll()
+		.antMatchers("/usuarios/cadastrar").permitAll()
 		.anyRequest().authenticated()
 		.and().httpBasic()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
