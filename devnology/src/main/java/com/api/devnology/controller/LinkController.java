@@ -40,6 +40,10 @@ public class LinkController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
+	@GetMapping("/{id}")
+	public ResponseEntity<LinkModel> GetById(@PathVariable long id){
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}
 	
 	
 	@GetMapping("/nome/{nome}")				/*Insere a variável do endpoint*/
