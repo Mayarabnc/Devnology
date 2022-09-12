@@ -10,7 +10,7 @@ const routes: Routes = [
 
   {path:'', redirectTo: 'login', pathMatch: 'full'},
   {path:'cadastrar', component: CadastrarLinkComponent},
-  {path:'editar', component: EditarLinkComponent},
+  {path:'editar/:id', component: EditarLinkComponent},
   {path:'link', component: LinkComponent},
   {path:'login', component:LoginComponent},
   {path:'cadastrarUser', component: CadastrarUsuarioComponent}

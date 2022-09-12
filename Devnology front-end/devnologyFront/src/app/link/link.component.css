@@ -12,6 +12,16 @@ h6{
 
 /* Configurações da tag H */
 
+a{
+    color: black;
+}
+
+a:hover{
+    color: #00bc45 !important;
+}
+
+/* Fundo */
+
 .fundoDoLinks{
     margin-top: 60px;
     background-repeat: no-repeat;
@@ -27,6 +37,8 @@ h6{
     background-color:  #d9d9d9;
 }
 
+/* Fundo */
+
 .sair{
     color: white !important;
     cursor: pointer;
@@ -36,11 +48,7 @@ h6{
     cursor: pointer;
 }
 
-/* Fundo */
-.t-modal.primary{
-    background-color: black !important;
-}
-/* Fundo */
+
 
 /*Botões*/
 
