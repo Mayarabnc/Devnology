@@ -10,6 +10,6 @@ import com.api.devnology.model.LinkModel;
 
 @Repository
 public interface LinkRepository extends JpaRepository<LinkModel, Long>{
-	public List<LinkModel> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
+	public List<LinkModel> findAllByNomeLinkContainingIgnoreCase(@Param("nomeLink") String nome);
 								/*Buscar pelo "nome"(atributo da minha entidade) e trazer tudo que está dentro da variável sem levar em consideração o maiúsculo ou minúsculo */
 }

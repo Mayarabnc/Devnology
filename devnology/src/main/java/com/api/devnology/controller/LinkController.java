@@ -43,9 +43,9 @@ public class LinkController {
 	
 	
 	@GetMapping("/nome/{nome}")				/*Insere a variável do endpoint*/
-	public ResponseEntity<List<LinkModel>> GetByNome(@PathVariable String nome){
+	public ResponseEntity<List<LinkModel>> GetByNome(@PathVariable String nomeLink){
 													/*Pega uma variável de dentro do caminho da URI*/
-		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
+		return ResponseEntity.ok(repository.findAllByNomeLinkContainingIgnoreCase(nomeLink));
 	}
 	
 		/*Indica que o metodo responderá as requisições do tipo POST que forem enviadas para o endpoint*/

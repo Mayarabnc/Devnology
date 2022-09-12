@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -26,13 +27,14 @@ public class LinkModel {
 	private long id;
 	
 	@NotNull
-	private String nome;
+	private String nomeLink;
 	
 	@NotNull
 	private String link;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("linkmodel")
+	@JoinColumn(name = "usuario")
 	private Usuario usuario;
 
 	public long getId() {
@@ -43,12 +45,12 @@ public class LinkModel {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeLink() {
+		return nomeLink;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeLink(String nomeLink) {
+		this.nomeLink = nomeLink;
 	}
 
 	public String getLink() {
@@ -66,5 +68,5 @@ public class LinkModel {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
+
 }
