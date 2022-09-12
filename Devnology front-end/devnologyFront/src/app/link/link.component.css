@@ -5,7 +5,7 @@ h1{
 }
 
 .fundoDoLinks{
-    margin-top: 80px;
+    margin-top: 60px;
     background-repeat: no-repeat;
     background-color: #01ff5f;
     background-size: cover;
@@ -19,6 +19,20 @@ h1{
     background-color:  #d9d9d9;
 }
 
+.sair{
+    color: white !important;
+    cursor: pointer;
+}
+.sair:hover{
+    color: #01ff5f !important;
+    cursor: pointer;
+}
+
+/* Fundo */
+.t-modal.primary{
+    background-color: black !important;
+}
+/* Fundo */
 
 /*Botões*/
 

@@ -4,10 +4,10 @@
         <div class="col-ml-8 centralizarRetangulo">
             <h1>Cadastrar Link</h1>
             <h5 class="justify-content-start ml-3 mt-3">Nome:</h5>
-            <input type="text" placeholder="Digite o nome que deseja usar para o link">
+            <input [(ngModel)]="linkS.nomeLink" type="text" placeholder="Digite o nome que deseja usar para o link">
             <h5 class="justify-content-start ml-3" >Link:</h5>
-            <input type="text" placeholder="Digite o link da pagina">
-            <button class="btn-cadastrar" >Cadastrar</button>
+            <input [(ngModel)]="linkS.link" type="text" placeholder="Digite o link da pagina">
+            <button (click)="cadastrar()" class="btn-cadastrar" >Cadastrar</button>
         </div>
     </div>
 </div>
