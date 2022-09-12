@@ -4,10 +4,10 @@
         <div class="col-ml-8 centralizarRetangulo">
             <h1 class="d-flex justify-content-center">Editar {{link.nomeLink}}</h1>
             <h5 class="justify-content-start ml-3 mt-3">Nome:</h5>
-            <input type="text" placeholder="Digite o nome que deseja usar para o link">
+            <input [(ngModel)]="link.nomeLink" type="text" placeholder="Digite o nome que deseja usar para o link">
             <h5 class="justify-content-start ml-3" >Link:</h5>
-            <input type="text" placeholder="Digite o link da pagina">
-            <button class="btn-cadastrar-preto" >Editar</button>
+            <input [(ngModel)]="link.link"type="text" placeholder="Digite o link da pagina">
+            <button class="btn-cadastrar-preto"  (click)="editar()">Editar</button>
         </div>
     </div>
 </div>

@@ -34,4 +34,12 @@ export class EditarLinkComponent implements OnInit {
     })
   }
 
+  editar(){
+    this.linkService.putLInk(this.link).subscribe((resp: LinkModel) => {
+      this.link = resp
+      alert("Link atualizado com sucesso")
+      this.router.navigate(["/link"])
+    })
+  }
+
 }
