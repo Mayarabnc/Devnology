@@ -21,8 +21,10 @@ export class CadastrarLinkComponent implements OnInit {
     private linkService: LinkService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     window.scroll(0,0)
+
+    this.findAllLinks()
   }
 
   findAllLinks(){

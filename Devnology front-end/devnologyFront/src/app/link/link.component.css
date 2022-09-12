@@ -1,8 +1,16 @@
+/* Configurações da tag H */
+
 h1{
     color: black;
     margin-left: 110px;
     font-size: 45px;
 }
+
+h6{
+    font-size: 10px;
+}
+
+/* Configurações da tag H */
 
 .fundoDoLinks{
     margin-top: 60px;
