@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastrarUsuarioComponent } from './cadastrar-usuario/cadastrar-usuario.component';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DeletarLinkComponent } from './deletar-link/deletar-link.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     EditarLinkComponent,
     LinkComponent,
     LoginComponent,
-    CadastrarUsuarioComponent
+    CadastrarUsuarioComponent,
+    DeletarLinkComponent
   ],
   imports: [
     BrowserModule,

@@ -5,14 +5,14 @@ import { LinkModel } from '../model/LinkModel';
 import { LinkService } from '../service/link.service';
 
 @Component({
-  selector: 'app-editar-link',
-  templateUrl: './editar-link.component.html',
-  styleUrls: ['./editar-link.component.css']
+  selector: 'app-deletar-link',
+  templateUrl: './deletar-link.component.html',
+  styleUrls: ['./deletar-link.component.css']
 })
-export class EditarLinkComponent implements OnInit {
+export class DeletarLinkComponent implements OnInit {
 
   link: LinkModel = new LinkModel()
-
+  idLink: number
   constructor(
     private linkService: LinkService,
     private router: Router,
@@ -24,20 +24,19 @@ export class EditarLinkComponent implements OnInit {
       this.router.navigate(['/login'])
     }
 
-    let id = this.route.snapshot.params['id']
-    this.findByIdLink(id)
+    this.idLink = this.route.snapshot.params["id"]
+    this.findByIdLink(this.idLink)
   }
 
   findByIdLink(id: number){
-    this.linkService.getByIdLink(id).subscribe((resp: LinkModel) => {
+    this.linkService.getByIdLink(id).subscribe((resp: LinkModel) =>{
       this.link = resp
     })
   }
 
-  editar(){
-    this.linkService.putLInk(this.link).subscribe((resp: LinkModel) => {
-      this.link = resp
-      alert("Link atualizado com sucesso")
+  deletar(){
+    this.linkService.deleteLink(this.idLink).subscribe(() =>{
+      alert("Link deletado com sucesso")
       this.router.navigate(["/link"])
     })
   }

@@ -34,7 +34,7 @@ export class LinkService {
     return this.http.put<LinkModel>("http://localhost:8080/link", link, this.token)
   }
 
-  deleteLInk(id: number){
+  deleteLink(id: number){
     return this.http.delete(`http://localhost:8080/link/${id}`, this.token)
   }
 }
