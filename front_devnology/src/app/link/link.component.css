@@ -20,6 +20,10 @@ a:hover{
     color: #00bc45 !important;
 }
 
+a .fa-trash-o:hover{
+    color: rgb(223, 1, 1);
+}
+
 /* Fundo */
 
 .fundoDoLinks{

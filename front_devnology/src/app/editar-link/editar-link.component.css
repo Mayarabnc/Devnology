@@ -46,6 +46,7 @@ input{
     padding-bottom: 20px;
     margin-top: 10%;
     margin-left: 30%;
+    margin-left: 16%;
     background-color: black;
     color: white;
     border-color: black;
@@ -124,7 +125,7 @@ input{
         padding-top: 20px;
         padding-bottom: 20px;
         margin-top: 10%;
-        margin-left: 8%;
+        margin-left: 16%;
         background-color: #01ff5f;
         color: white;
         border: none;
@@ -202,7 +203,7 @@ input{
         padding-top: 20px;
         padding-bottom: 20px;
         margin-top: 10%;
-        margin-left: 8%;
+        margin-left: 16%;
         background-color: #01ff5f;
         color: black;
         border: none;
@@ -280,7 +281,7 @@ input{
         padding-top: 20px;
         padding-bottom: 20px;
         margin-top: 10%;
-        margin-left: 8%;
+        margin-left: 16%;
         background-color: #01ff5f;
         color: black;
         border: none;
