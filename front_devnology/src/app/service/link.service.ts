@@ -19,22 +19,22 @@ export class LinkService {
   }
 
   getAllLinks(): Observable<LinkModel[]> {
-    return this.http.get<LinkModel[]>("http://localhost:8080/link", this.token)
+    return this.http.get<LinkModel[]>("https://apidevnology.herokuapp.com/link", this.token)
   }
 
   getByIdLink(id: number): Observable<LinkModel>{
-    return this.http.get<LinkModel>(`http://localhost:8080/link/${id}`, this.token)
+    return this.http.get<LinkModel>(`https://apidevnology.herokuapp.com/link/${id}`, this.token)
   }
 
   postLink(linkSer: LinkModel): Observable<LinkModel> {
-    return this.http.post<LinkModel>("http://localhost:8080/link", linkSer, this.token)
+    return this.http.post<LinkModel>("https://apidevnology.herokuapp.com/link", linkSer, this.token)
   }
 
   putLInk(link: LinkModel): Observable<LinkModel>{
-    return this.http.put<LinkModel>("http://localhost:8080/link", link, this.token)
+    return this.http.put<LinkModel>("https://apidevnology.herokuapp.com/link", link, this.token)
   }
 
   deleteLink(id: number){
-    return this.http.delete(`http://localhost:8080/link/${id}`, this.token)
+    return this.http.delete(`https://apidevnology.herokuapp.com/link/${id}`, this.token)
   }
 }

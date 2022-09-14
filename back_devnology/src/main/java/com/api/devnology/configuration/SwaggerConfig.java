@@ -3,6 +3,7 @@ package com.api.devnology.configuration;
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -13,6 +14,7 @@ import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
 
 @Configuration
+@Service
 public class SwaggerConfig {
 
 	@Bean
@@ -27,11 +29,11 @@ public class SwaggerConfig {
 								.url("http://devnology.api.com/"))
 						.contact(new Contact()
 								.name("Devnology")
-								.url("https://github.com/Mayarabnc/Devnology")
+								.url("https://github.com/Mayarabnc/Back_devnology")
 								.email("mayarabncabral@gmail.com")))
 				.externalDocs(new ExternalDocumentation()
 						.description("Github")
-						.url("https://github.com/Mayarabnc/Devnology"));
+						.url("https://github.com/Mayarabnc/Back_devnology"));
 	}
 	
 	@Bean
