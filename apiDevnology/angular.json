@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "devnologyFront": {
+    "apiDevnology": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/devnology-front",
+            "outputPath": "dist/api-devnology",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,10 +27,10 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
               ],
               "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/popper.js/dist/umd/popper.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
-              ]
+                "./node_modules/jquery/dist/jquery.js",
+                "./node_modules/popper.js/dist/umd/popper.min.js",
+                "./node_modules/bootstrap/dist/js/bootstrap.js"
+                ]
           },
           "configurations": {
             "production": {
@@ -73,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "devnologyFront:build:production"
+              "browserTarget": "apiDevnology:build:production"
             },
             "development": {
-              "browserTarget": "devnologyFront:build:development"
+              "browserTarget": "apiDevnology:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "devnologyFront:build"
+            "browserTarget": "apiDevnology:build"
           }
         },
         "test": {
@@ -107,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "devnologyFront"
+  "cli": {
+    "analytics": false
+  }
 }
